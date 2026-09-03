@@ -77,15 +77,31 @@ multi-stage-hello-world — 0.0.0.0:8080->3000/tcp
 
 ## Task 3: Docker Application Deployment
 
-Three different application types were deployed using Docker:
+Three different types of applications were deployed using Docker:
 
-| Application | Docker Image | Port |
-|---|---|---|
-| Node.js | nodejs-hello-world | 3000 |
-| Python | python-hello-world | 8000 |
-| Java | java-hello-world | 8080 |
+| Application | Docker Image | Host Port |
+|---|---|---:|
+| Node.js | `nodejs-hello-world` | 3000 |
+| Python | `python-hello-world` | 8000 |
+| Java | `java-hello-world` | 8083 |
 
-All three applications were successfully deployed using Docker.
+All three applications were successfully deployed and accessed through Docker containers.
+
+### Java Application Verification
+
+Application URL:
+
+```text
+http://localhost:8083
+```
+
+Application output:
+
+```
+Hello from Java
+```
+
+**Important:** Use `8083` for Java here, not `8080`, because `8080` is being used by your multi-stage application.
 
 ---
 
